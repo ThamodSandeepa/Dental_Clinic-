@@ -1,0 +1,704 @@
+
+:root{
+    --color1: #1676dd;
+    --color2: #7ee5f3;
+    --color3: #e72254;
+    --color4: #21313f;
+    --color5: #DAA520;
+}
+
+*{
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background: white;
+    padding: 1rem 7%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo{
+    width: 75px;
+}
+
+.logo img{
+    width: 110%;
+}
+
+.navbar a{
+    padding: 1rem;
+    margin: 0.5rem;
+    color: var(--color3);
+    font-size: 1.5rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navbar a:hover{
+    color: var(--color3);
+
+}
+
+.navbar a::after{
+    content: "";
+    background-color: var(--color3);
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    transition: 0.5s;
+
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-icons i{
+    font-size: 3rem;
+    color: var(--color4);
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+}
+
+.header-icons i:hover{
+    color: var(--color3);
+    cursor: pointer;
+}
+
+#bar{
+   font-size: 2.5rem;
+   color: var(--color4);
+   margin-left: 1rem; 
+   display: none;
+}
+
+#bar:hover{
+    color: var(--color3);
+}
+
+/*Home section CSS**********************************************/
+.main-home{
+    width: 100%;
+    background-image: url( images/dentist8@.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 2rem 7%;
+}
+
+.inner-home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 8%;
+}
+
+.main-inner-home{
+    flex: 1 1 45rem;
+}
+
+.left-content{
+    padding: 2 2.5rem;
+}
+
+.left-content h3{
+    color:var(--color4);
+    font-size: 4rem;
+}
+.left-content h1{
+    color: white;
+    font-size: 9rem;
+}
+.left-content p{
+    color:darkmagenta;
+    font-size: 1.4rem;
+    padding-top: 2rem 0;
+}
+
+.btn{
+    font-size: 1.5rem;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.5s all ease;
+    z-index: 1;
+    cursor: pointer;
+    background-color: white;
+    color: var(--color4);
+    margin-top: 3rem;
+}
+.btn:hover{
+    color: white;
+}
+
+.btn::before{
+    content: "";
+    color: white;
+    top: 50%;
+    transition: 0.5s all ease;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+.btn:hover:before{
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    background-color:var(--color3);
+    border-radius: 10px;
+}
+
+
+.home-icons-below{
+    padding: 1rem 7%;
+    margin-top: -40px;
+}
+.main-home-icons{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home-icon-box{
+    flex: 1 1 230px;
+    padding: 1rem;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white; 
+}
+
+.home-icon-box:hover{
+    background-color: var(--color4);
+}
+.home-icon-box:hover h2{
+    color: white;
+}
+.home-icon-box:hover p{
+    color: white;
+}
+
+
+.home-icon-box h2{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.home-icon-box p{
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+
+/*About section CSS**********************************************/
+
+.main-about{
+    padding: 8.5rem 7%;
+}
+
+.about-heading{
+    text-align: center;
+}
+
+.about-heading h1{
+    color: var(--color4);
+    font-size: 48px;
+}
+.about-heading h1 span{
+    color: var(--color2);
+}
+
+.about-main-div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.main-inner-about{
+   flex: 1 1 45rem; 
+}
+.about-img img{
+    width: 100%;
+    padding: 2rem;
+
+}
+.about-right-content h2{
+    color: var(--color1);
+    font-size: 2rem;
+}
+
+.about-right-content h1{
+    color: var(--color5);
+    font-size: 5rem;
+}
+
+.about-right-content p{
+    color: var(--color4);
+    font-size: 1.2rem;
+}
+
+/*Doctors section CSS**********************************************/
+
+.main-our-doctors{
+    padding: 2rem 7%;
+}
+
+.doctor-heading{
+    padding: 2rem 0;
+    text-align: center;
+}
+.doctor-heading h1{
+    font-size: 48px;
+    color: var(--color4);
+}
+
+.doctor-heading h1 span{
+    color: var(--color2);
+}
+.doctor-inner-main-div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+}
+.doctor-inner-box{
+    flex: 1 1 300px;
+    position: relative;
+    overflow: hidden;
+}
+.doctor-inner-box::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(0deg, white 50%, transparent);
+    bottom: -200px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.doctor-inner-box:hover:after{
+    bottom: -100px;
+}
+
+.doctor-inner-box:hover .doctor-icons{
+    left: 3%;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.doctor-icons i:hover{
+    border-top-left-radius: 15px;
+    transform: scale(1.1);
+
+}
+
+.doctor-inner-box .teaming img{
+    width: 100%;
+    border: 3px solid var(--color4);
+}
+
+.doctor-inner-box:hover .teaming img{
+   border-top-right-radius: 20px;
+}
+
+
+.doctor-icons{
+    position:absolute;
+    top: 5%;
+    left: -100%;
+    transition: 0.8s ease-in-out;
+}
+.doctor-icons i{
+    padding: 0.5rem;
+    border: 1px solid var(--color4);
+    font-size: 1.5rem;
+    color: var(--color3);
+    background: white;
+    margin: 0.1rem;
+}
+
+.doc-inner-names{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    font-size: 1.5rem;
+    color: var(--color4);
+    z-index: 1;
+}
+
+
+/*Services section CSS**********************************************/
+
+.main-services{
+    padding: 3rem- 7%;
+}
+
+.services-heading{
+    text-align: center;
+}
+
+.services-heading h1{
+    font-size: 48px;
+    color: var(--color4);
+}
+
+.services-heading h1 span{
+    color: var(--color2);
+}
+
+.main-inner-services{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 5%;
+}
+
+.service-box{
+    flex: 1 1 300px;
+    padding: 1rem ;
+    border: 2px solid var(--color4);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.service-box:hover{
+    margin-top: -10px;
+    border-bottom: 5px solid var(--color4);
+}
+
+.service-box-icon{
+  align-items: center;
+  padding: 2rem; 
+  background-color: var(--color2);  
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.service-box-icon i{
+    font-size: 3rem;
+    color: var(--color3);
+}
+.service-box h2{
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+
+.service-content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+
+/*gallery section CSS**********************************************/
+
+.main-gallery-section{
+    padding: 8.5rem 7%;
+}
+
+.gallery-heading{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.gallery-heading h1{
+    font-size: 48px;
+    color: var(--color4);
+}
+
+.gallery-heading h1 span{
+    color: var(--color2);
+}
+
+.main-inner-gallery{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.inner-gallery{
+    flex: 1 1 300px;
+}
+.inner-gallery:hover img{
+    transform: scale(1.2);
+    transform: rotate(5deg);
+    cursor: pointer;
+}
+
+
+.inner-gallery img{
+    width: 100%;
+    border: 2px solid var(--color4);
+}
+
+/*reviews section CSS**********************************************/
+
+.main-customer-review{
+    padding: 3rem 7%;
+}
+
+.customer-review-heading{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.customer-review-heading h1{
+    font-size: 48px;
+    color: var(--color4);
+}
+
+.customer-review-heading h1 span{
+    color: var(--color2);
+}
+
+.main-customer-inner{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.inner-customer-box{
+    flex: 1 1 300px;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.inner-box-content img{
+    width: 100%;
+}
+
+.customer-review h2{
+    font-size: 2.5rem;
+    color: var(--color4);
+    padding: 0.5rem 0;
+}
+
+.customer-review p{
+    color: var(--color4);
+    font-size: 1rem;
+}
+
+.customer-review i{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: var(--color3);
+}
+
+
+/*contact us section CSS**********************************************/
+
+.heading{
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+h1{
+    font-size: 48px;
+    color: var(--color4);
+}
+
+h1 span{
+    color: var(--color2);
+}
+
+.contact form{
+    border-radius: 1rem;
+    background-color: var(--color1);
+    padding: 4rem;
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
+.contact form .box{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 1.2rem 1.2rem;
+    font-size: 1.2rem;
+    color: darkkhaki;
+    text-transform: none;
+}
+
+.contact form span{
+    font-size: 1.5rem;
+    color: black;
+}
+
+  
+
+/*footer CSS**********************************************/
+.footer{
+    background-color: var(--color2);
+    padding-top: 15px;
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer-box{
+    text-align: center;
+}
+
+.footer-box i{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    font-size: 2rem;
+    background-color: var(--color4);
+    color: white;  
+}
+
+.footer-box p{
+    font-size: 1.5rem;
+    color: var(--color4);
+    text-transform: none;
+}
+
+.footer-box h3{
+   font-size: 2rem;
+   margin: 1rem 0;
+   color: black;   
+}
+
+.credit{
+    text-align: center;
+    border-top: 1px;
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: black;
+    padding-bottom: 0.5rem;
+}
+
+.credit i{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: black;
+    color: white; 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    #bar{
+        display: initial;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+    }
+    .navbar.active{
+        left: 0;
+    }
+    .navbar a{
+        display: block;
+        margin: 2rem;
+        padding: 1rem;
+        border: 1px solid var(--color4);
+        font-size: 1.7rem;
+    }
+    .main-home{
+        height: auto;
+        padding-top:30%;
+    }
+
+
+}
+
+
+
+
